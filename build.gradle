@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 repositories {
@@ -9,10 +8,18 @@ repositories {
 }
 
 application {
-    mainClass.set("Duke")
+    mainClass.set('Launcher')  // This should match the class where your main method is.
 }
 
-shadowJar {
-    archiveBaseName = "javafx-tutorial-duke"
-    archiveClassifier = null
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17.0.7'
+    implementation 'org.openjfx:javafx-fxml:17.0.7'
+}
+
+run {
+    // Point to your downloaded JavaFX SDK
+    jvmArgs += [
+        '--module-path', '/Users/jerielchan/Downloads/javafx-sdk-17.0.12/lib',
+        '--add-modules', 'javafx.controls,javafx.fxml'
+    ]
 }
