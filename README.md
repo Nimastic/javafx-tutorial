@@ -1,32 +1,34 @@
 This is a starter repo for https://se-education.org/guides/tutorials/javaFx.html
 
-JavaFX Chatbot Project - Duke GUI
+# JavaFX Chatbot Project - Duke GUI
+
 This project is a JavaFX-based chatbot application called Duke. It demonstrates how to build a GUI for a chatbot using JavaFX. The project follows a tutorial format and is split into several stages, from setting up the basic project structure to incorporating a fully functional GUI with FXML.
 
-Prerequisites
-Java Development Kit (JDK) 17: Ensure that you have JDK 17 installed on your system.
+## Prerequisites
 
-You can download it from here.
-Gradle: Gradle is used for managing dependencies and building the project.
+- **Java Development Kit (JDK) 17**: Ensure that you have JDK 17 installed on your system.
+  - You can download it from [here](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
+  
+- **Gradle**: Gradle is used for managing dependencies and building the project.
+  - To install Gradle, refer to [Gradle installation guide](https://gradle.org/install/).
 
-To install Gradle, refer to Gradle installation guide.
-Integrated Development Environment (IDE): We recommend using IntelliJ IDEA, but any Java-supporting IDE should work.
+- **Integrated Development Environment (IDE)**: We recommend using IntelliJ IDEA, but any Java-supporting IDE should work.
+  - For IntelliJ, refer to [IntelliJ IDEA Setup](https://www.jetbrains.com/idea/download/) and configure it with JDK 17.
 
-For IntelliJ, refer to IntelliJ IDEA Setup and configure it with JDK 17.
-Setup Instructions
-Clone the Repository:
+## Setup Instructions
 
-bash
-Copy code
+### Clone the Repository:
+```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
-Open the Project in Your IDE:
 
+### Open the Project in Your IDE:
 If you're using IntelliJ IDEA, open the project from the main screen. Make sure to import the build.gradle file for Gradle setup.
-Configure JavaFX Dependencies: Update your build.gradle file to include the following dependencies for JavaFX based on your operating system:
 
-groovy
-Copy code
+### Configure JavaFX Dependencies:
+Update your build.gradle file to include the following dependencies for JavaFX based on your operating system:
+
+```bash
 repositories {
     mavenCentral()
 }
@@ -43,35 +45,33 @@ dependencies {
     implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'win'
     implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'mac'
 }
-Sync Dependencies:
 
-For IntelliJ IDEA: Use the Gradle tool window to refresh and reload dependencies.
-Without an IDE: Run the following command in the terminal:
-bash
-Copy code
-./gradlew clean build
-Running the Project:
+### Sync Dependencies:
+- For IntelliJ IDEA: Use the Gradle tool window to refresh and reload dependencies.
+- Without an IDE: Run the following command in the terminal:
+```./gradlew clean build
 
-Run the project using Gradle in the terminal:
-bash
-Copy code
-./gradlew run
-Alternatively, use your IDE's run configuration to run the Launcher class.
-Setting Up FXML (Optional):
+### Running the Project:
+- Run the project using Gradle in the terminal:
+```./gradlew run
+- Alternatively, use your IDE's run configuration to run the Launcher class.
 
+### Setting Up FXML (Optional):
 You can install Scene Builder to visually design the JavaFX GUI components and bind them to your controller classes.
-Development
+
+## Development
 The project structure contains:
 
-Main.java: Entry point for the JavaFX application.
-Launcher.java: Acts as the launcher to avoid classpath issues.
-MainWindow.fxml: FXML file that defines the GUI layout.
-DialogBox.java: Custom control for chat dialog boxes.
-Running the Application
-After setting everything up, you should be able to run the application and see the following window:
+- Main.java: Entry point for the JavaFX application.
+- Launcher.java: Acts as the launcher to avoid classpath issues.
+- MainWindow.fxml: FXML file that defines the GUI layout.
+- DialogBox.java: Custom control for chat dialog boxes.
 
-A simple GUI with a text input field, a send button, and a scrollable area for displaying the conversation.
-Troubleshooting
+## Running the Application
+After setting everything up, you should be able to run the application and see the following window:
+- A simple GUI with a text input field, a send button, and a scrollable area for displaying the conversation.
+
+## Troubleshooting
 Common Issues
 JavaFX not loading properly:
 
