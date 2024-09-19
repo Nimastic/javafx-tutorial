@@ -51,11 +51,11 @@ dependencies {
 ### Sync Dependencies:
 - For IntelliJ IDEA: Use the Gradle tool window to refresh and reload dependencies.
 - Without an IDE: Run the following command in the terminal:
-```./gradlew clean build
+```./gradlew clean build```
 
 ### Running the Project:
 - Run the project using Gradle in the terminal:
-```./gradlew run
+```./gradlew run```
 - Alternatively, use your IDE's run configuration to run the Launcher class.
 
 ### Setting Up FXML (Optional):
