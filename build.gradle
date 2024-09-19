@@ -1,25 +1,36 @@
 plugins {
-    id 'java'
     id 'application'
+    id 'java'
 }
 
 repositories {
     mavenCentral()
 }
 
-application {
-    mainClass.set('Launcher')  // This should match the class where your main method is.
-}
+def javafxVersion = '17.0.7'
 
 dependencies {
-    implementation 'org.openjfx:javafx-controls:17.0.7'
-    implementation 'org.openjfx:javafx-fxml:17.0.7'
+    implementation "org.openjfx:javafx-controls:$javafxVersion"
+    implementation "org.openjfx:javafx-fxml:$javafxVersion"
+}
+
+application {
+    mainClass.set('Launcher') // Match with your main class
 }
 
 run {
-    // Point to your downloaded JavaFX SDK
+    // JVM args to include JavaFX modules for your OS
     jvmArgs += [
-        '--module-path', '/Users/jerielchan/Downloads/javafx-sdk-17.0.12/lib',
+        '--module-path', 'C:/Users/jerie/Downloads/openjfx-17.0.12_windows-x64_bin-sdk/javafx-sdk-17.0.12/lib',
+        '--add-modules', 'javafx.controls,javafx.fxml'
+    ]
+}
+
+// Include JavaFX for compilation
+tasks.withType(JavaCompile) {
+    options.compilerArgs += [
+        // '--module-path', '/Users/jerielchan/Downloads/javafx-sdk-17.0.12/lib',
+        '--module-path', 'C:/Users/jerie/Downloads/openjfx-17.0.12_windows-x64_bin-sdk/javafx-sdk-17.0.12/lib',
         '--add-modules', 'javafx.controls,javafx.fxml'
     ]
 }
