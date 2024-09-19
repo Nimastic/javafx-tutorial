@@ -21,6 +21,7 @@ This project is a JavaFX-based chatbot application called Duke. It demonstrates 
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+```
 
 ### Open the Project in Your IDE:
 If you're using IntelliJ IDEA, open the project from the main screen. Make sure to import the build.gradle file for Gradle setup.
@@ -45,6 +46,7 @@ dependencies {
     implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'win'
     implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'mac'
 }
+```
 
 ### Sync Dependencies:
 - For IntelliJ IDEA: Use the Gradle tool window to refresh and reload dependencies.
